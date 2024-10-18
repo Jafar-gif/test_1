@@ -1,20 +1,19 @@
-numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+def get_matrix(n,m,value):
+    matrix = []
 
-primes = []
+    for i in range(n):
+        matrix.append([])
+        for j in range(m):
+            matrix[i].append(value)
 
-not_primes = []
-for i in numbers:
-    if i == 1:
-        continue
-        is_prime = True
-for j in range(2, i):
-    if i % j == 0:
-        is_prime = False
-        break
-        if is_prime == True:
-            primes.append(i)
-        else:
-            not_primes.append(i)
-print('Primes', primes)
-print('Not Primes', not_primes)
+    return matrix
+
+result1 = get_matrix(2,2,10)
+result2 = get_matrix(3,5,42)
+result3 = get_matrix(4,2,13)
+print(result1)
+print(result2)
+print(result3)
+
+
 
